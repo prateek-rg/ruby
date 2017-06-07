@@ -72,6 +72,7 @@ end
 def prompt_set_value
 	puts "Enter a value. Use Syntax <Column> = <value>. For e.g. D5 = 5. Do mind the spaces on either side of '='"
 	command = gets.chomp
+	puts command
 	if command.match(/^[A-J][0-9] = (\d+)$/)
 		cell, value = command.split(' = ')
 
@@ -92,6 +93,7 @@ end
 def prompt_set_expression
 	puts "Enter an expression. Use Syntax <Column> = <Column> <operator> <Column>. For e.g. D5 = A5 + B5. Mind the spaces"
 	command = gets.chomp
+	puts command
 	if command.match(/^[A-J][0-9] = [A-J][0-9] [+|-|*|**] [A-J][0-9]$/)
 		operator = command[/[+|-|*|**]/]
 
